@@ -1,0 +1,151 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Color.ur.dreamz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" width="125px" alt="Color.ur.dreamz"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="images/cart.png" width="30px" height="30px" alt="Cart"></a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+
+    <!---------------------------- Contact Section ---------------------------->
+
+    <div class="contact-us">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We’d love to hear from you! Whether you have a question, feedback, or just want to say hello, reach out to us below.</p>
+
+            <div class="row">
+                <!-- Contact Form -->
+                <div class="col-2">
+                    <form action="submit_form.php" method="POST">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                        
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Your email" required>
+                        
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+                        
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-2"> 
+                    <h3>Our Contact Information</h3>
+                    <div class="contact-info">
+                        <p><strong>Address:</strong> Plot no.XX, Kolhapur</p>
+                        <p><strong>Email:</strong> color.ur.dreamz21@.com</p>
+                        <p><strong>Phone:</strong> +91 XXXXXX4621</p>
+                        <p><strong>Working Hours:</strong> Mon - Sat, 9:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!---------------------------- Google Map Section ---------------------------->
+    <div class="map-container">
+        <h2>Find Us On The Map</h2>
+        <div class="map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.298659780808!2d74.21819921485926!3d16.701936126514654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1a78c6026e597%3A0xf9401671b462eeb6!2sKolhapur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700058162142!5m2!1sen!2sin" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <!---------------------------------- Footer ------------------------------------>
+    <div class ="footer">
+        <div class="container">
+            
+            <div class="row">
+              
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png">
+                    <p>Our Purpose
+                  <br> Is to sustainably bring the joy and beauty of handmade art into every home, celebrating creativity, passion, and the stories behind each creation. </br> </p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Quick Links</h3>
+                   <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    
+                    <li><a href="terms & conditions.html">Terms & Conditions</a></li>
+                    <li><a href="privacy policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                   <ul>
+                       <li><a href="https://www.instagram.com/_.color.ur.dreamz._" target="_blank">Instagram</a></li>
+                       <li><a href="https://www.threads.net/@_.color.ur.dreamz._" target="_blank">Threads</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col-3">
+                    <h3>Contact Us</h3>
+                    <p>Email: color.ur.dreamz21@gmail.com</p>
+                    <p>Phone: +91 XXXXXX4621</p>
+                    <p>Address: Plot no.XX, Kolhapur</p>
+                </div>
+                
+                
+            </div>
+            
+            <hr><!--horizontal line-->
+            <p class="copyright">Copyright © 2024 Color.ur.dreamz. All Rights Reserved.</p>
+            
+        </div>
+</div>
+        
+    <!---------------------------- JS for Toggle Menu ---------------------------->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

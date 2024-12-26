@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Cart - Color.ur.dreamz</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <!--added a cdn link by searching font awesome4 cdn and getting this link from https://www.bootstrapcdn.com/fontawesome/ this url*/-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    <body>
+        <!--<div class ="header">-->
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" width="125px"></a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                         <li><a href="products.html">Products</a></li>
+                         <li><a href="about.html">About</a></li>
+                         <li><a href="contact.html">Contact</a></li>
+                         <li><a href="account.html">Account</a></li>
+
+                    </ul>
+                </nav>
+                <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+                <img src="images/menu.png" class="menu-icon" onClick="menutoggle()" >
+            </div>
+           
+        </div>
+    <!--</div>-->
+    
+        
+        <!------------------------------ cart items details------------------------------>
+
+        <div class="small-container cart-page">
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="images/product-21.jpg">
+                        <div>
+                            <p>Wedding Hoop</p>
+                            <small>Price: Rs. 2199.00</small><br>
+                            <a href="">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" vlaue="1"></td>
+                <td>Rs. 2199.00</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="images/frame1.jpg">
+                        <div>
+                            <p>Spotify Frame </p>
+                            <small>Price: Rs. 699.00</small><br>
+                            <a href="">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" vlaue="1"></td>
+                <td>Rs. 699.00</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="images/key1.jpg">
+                        <div>
+                            <p>Spotify Keychains</p>
+                            <small>Price: Rs. 249.00</small><br>
+                            <a href="">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" vlaue="1"></td>
+                <td>Rs. 249.00</td>
+            </tr>
+            </table>
+            
+            <div class="total-price">
+                <table>
+                    <tr>
+                        <td>Subtotal</td>
+                        <td>Rs. 3147.00</td>
+                    </tr>
+                    <tr>
+                        <td>Tax</td>
+                        <td>Rs. 53.00</td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td>Rs 3200.00</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        
+       
+        <!----------------------------------footer------------------------------------->
+        <div class ="footer">
+            <div class="container">
+                
+                <div class="row">
+                  
+                    <div class="footer-col-2">
+                        <img src="images/logo-white.png">
+                        <p>Our Purpose
+                      <br> Is to sustainably bring the joy and beauty of handmade art into every home, celebrating creativity, passion, and the stories behind each creation. </br> </p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Quick Links</h3>
+                       <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        
+                        <li><a href="terms & conditions.html">Terms & Conditions</a></li>
+                        <li><a href="privacy policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-4">
+                        <h3>Follow us</h3>
+                       <ul>
+                           <li><a href="https://www.instagram.com/_.color.ur.dreamz._" target="_blank">Instagram</a></li>
+                           <li><a href="https://www.threads.net/@_.color.ur.dreamz._" target="_blank">Threads</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col-3">
+                        <h3>Contact Us</h3>
+                        <p>Email: color.ur.dreamz21@gmail.com</p>
+                        <p>Phone: +91 XXXXXX4621</p>
+                        <p>Address: Plot no.XX, Kolhapur</p>
+                    </div>
+                    
+                    
+    
+                </div>
+                
+                <hr><!--horizontal line-->
+                <p class="copyright">Copyright © 2024 Color.ur.dreamz. All Rights Reserved.</p>
+                
+            </div>
+    </div>
+            
+        
+        
+        <!-----------------------------------js for toggle menu-------------------------------------->
+        <script>
+            var menuItems=document.getElementById("MenuItems");
+            
+            MenuItems.style.maxHeight="0px";
+            function menutoggle(){
+                if(MenuItems.style.maxHeight == "0px"){
+                    MenuItems.style.maxHeight="200px";
+                }
+                else{
+                    MenuItems.style.maxHeight="0px";
+                }
+            }
+
+            
+
+document.querySelectorAll('.cart-info a').forEach((removeBtn, index) => {
+    removeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const row = removeBtn.closest('tr');
+        row.remove();
+        updateTotal(); // Recalculate totals after removal
+    });
+});
+
+
+</script>
+     
+     
+    </body>
+</html>
